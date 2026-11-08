@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal profile portfolio">
+
+    <title>Personal Profile | Abdiwuhaab</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="page-shell">
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <a class="brand" href="#">
+            <span class="brand-mark">P</span>
+            <span>Personal Profile</span>
+        </a>
+
+        <span class="topbar-note">PROFILE</span>
+
+    </header>
+
+
+    <!-- PROFILE CARD -->
+    <section class="profile-card">
+
+        <div class="accent-bar"></div>
+
+        <div class="profile-main">
+
+            <!-- PROFILE PHOTO -->
+            <div class="photo-wrap">
+
+                <img
+                    id="profile-photo"
+                    src="Mint Polo Portrait with Leafy Backdrop (1).png"
+                    alt="Abdiwuhaab Profile Photo"
+                    onerror="this.style.display='none';
+                    document.getElementById('photo-placeholder').style.display='grid';"
+                >
+
+                <div id="photo-placeholder" class="photo-placeholder">
+                    <span class="placeholder-icon">＋</span>
+                    <span>Add your photo</span>
+                </div>
+
+            </div>
+
+
+            <!-- PERSONAL INFORMATION -->
+            <div class="identity">
+
+                <p class="eyebrow">PERSONAL PROFILE</p>
+
+                <h1 id="profile-name">Abdiwuhaab</h1>
+
+                <p class="identity-subtitle">
+                    Bachelor's Degree
+                </p>
+
+                <div class="location-chip">
+
+                    <span class="location-dot"></span>
+
+                    <span id="location-line">
+                        Mogadishu, Somalia
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- EDIT BUTTON -->
+            
+
+        </div>
+
+
+        <!-- PROFILE DETAILS -->
+        <div class="details-grid">
+
+            <!-- PHONE -->
+            <article class="detail-item">
+
+                <span class="detail-icon">☎</span>
+
+                <div>
+
+                    <p class="detail-label">PHONE</p>
+
+                    <a id="phone-value" href="tel:+252610165846">
+                        +252610165846
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- EMAIL -->
+            <article class="detail-item">
+
+                <span class="detail-icon">✉</span>
+
+                <div>
+
+                    <p class="detail-label">EMAIL</p>
+
+                    <a id="email-value" href="mailto:abdiwuhaab53@gmail.com">
+                        abdiwuhaab53@gmail.com
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- LOCATION -->
+            <article class="detail-item">
+
+                <span class="detail-icon">⌂</span>
+
+                <div>
+
+                    <p class="detail-label">LOCATION</p>
+
+                    <p id="city-country-value">
+                        Mogadishu, Somalia
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- UNIVERSITY -->
+            <article class="detail-item">
+
+                <span class="detail-icon">▤</span>
+
+                <div>
+
+                    <p class="detail-label">UNIVERSITY</p>
+
+                    <p id="university-value">
+                        GEDO INTERNATIONAL UNIVERSITY
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- EDUCATION -->
+            <article class="detail-item education-item">
+
+                <span class="detail-icon">◇</span>
+
+                <div>
+
+                    <p class="detail-label">EDUCATION LEVEL</p>
+
+                    <p id="education-value">
+                        Bachelor's Degree
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="card-footer">
+
+            <span>PERSONAL PROFILE</span>
+
+            <span id="last-updated">
+                Profile information
+            </span>
+
+        </footer>
+
+    </section>
+
+
+    <p class="page-note">
+        A simple profile. A clear introduction.
+    </p>
+
+</main>
+
+
+<!-- EDIT PROFILE DIALOG -->
+<dialog id="editor-dialog" class="editor-dialog">
+
+    <form id="profile-form" method="dialog">
+
+        <div class="dialog-heading">
+
+            <div>
+
+                <p class="eyebrow">PROFILE SETTINGS</p>
+
+                <h2>Edit your profile</h2>
+
+            </div>
+
+            <button
+                class="icon-button"
+                id="close-editor"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- FORM FIELDS -->
+        <div class="form-grid">
+
+            <label class="form-field full-width">
+
+                Profile photo
+
+                <input
+                    id="photo-input"
+                    type="file"
+                    accept="image/*"
+                >
+
+                <small>
+                    Choose an image from your device.
+                </small>
+
+            </label>
+
+
+            <label class="form-field">
+
+                Phone number
+
+                <input
+                    id="phone-input"
+                    type="tel"
+                    value="+252610165846"
+                    required
+                >
+
+            </label>
+
+
+            <label class="form-field">
+
+                Email address
+
+                <input
+                    id="email-input"
+                    type="email"
+                    value="abdiwuhaab53@gmail.com"
+                    required
+                >
+
+            </label>
+
+
+            <label class="form-field">
+
+                City
+
+                <input
+                    id="city-input"
+                    type="text"
+                    value="Mogadishu"
+                    required
+                >
+
+            </label>
+
+
+            <label class="form-field">
+
+                Country
+
+                <input
+                    id="country-input"
+                    type="text"
+                    value="Somalia"
+                    required
+                >
+
+            </label>
+
+
+            <label class="form-field full-width">
+
+                University
+
+                <input
+                    id="university-input"
+                    type="text"
+                    value="GEDO INTERNATIONAL UNIVERSITY"
+                    required
+                >
+
+            </label>
+
+
+            <label class="form-field full-width">
+
+                Education level
+
+                <select id="education-input" required>
+
+                    <option value="High School">
+                        High School
+                    </option>
+
+                    <option value="Diploma">
+                        Diploma
+                    </option>
+
+                    <option value="Bachelor's Degree" selected>
+                        Bachelor's Degree
+                    </option>
+
+                    <option value="Master's Degree">
+                        Master's Degree
+                    </option>
+
+                    <option value="PhD">
+                        PhD
+                    </option>
+
+                    <option value="Other / Still Studying">
+                        Other / Still Studying
+                    </option>
+
+                </select>
+
+            </label>
+
+        </div>
+
+
+        <!-- LIVE PREVIEW -->
+        <div class="preview-panel">
+
+            <div class="preview-photo-wrap">
+
+                <img
+                    id="preview-photo"
+                    alt="Preview of selected profile photo"
+                >
+
+                <span id="preview-photo-placeholder">
+                    Photo preview
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <p class="detail-label">LIVE PREVIEW</p>
+
+                <strong id="preview-university">
+                    GEDO INTERNATIONAL UNIVERSITY
+                </strong>
+
+                <p id="preview-summary">
+                    Mogadishu, Somalia · Bachelor's Degree
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="confirm-note">
+            Review the preview, then confirm to apply your changes.
+        </p>
+
+
+        <!-- BUTTONS -->
+        <div class="dialog-actions">
+
+            <button
+                class="cancel-button"
+                id="cancel-edit"
+                type="button"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="save-button"
+                id="save-profile"
+                type="submit"
+            >
+                Review &amp; Save
+            </button>
+
+        </div>
+
+    </form>
+
+</dialog>
+
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
